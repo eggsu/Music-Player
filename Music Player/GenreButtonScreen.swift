@@ -15,7 +15,6 @@ class GenreButtonScreen: UIViewController {
     //once close app, the music player will stop
     var musicPlayer=MPMusicPlayerController.applicationMusicPlayer
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,9 +22,15 @@ class GenreButtonScreen: UIViewController {
     
     @IBAction func genreButtonTapped(_ sender: UIButton) {
         
-        //! force wrap it
-        playGenre(genre: sender.currentTitle!)
+         //check for permission before play song
+        MPMediaLibrary.requestAuthorization { (status) in
+            if status == .authorized {
+                //force wrap it
+                self.playGenre(genre: sender.currentTitle!)
+            }
+        }
     }
+
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
         musicPlayer.stop()
@@ -33,6 +38,7 @@ class GenreButtonScreen: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         musicPlayer.skipToNextItem()
+ 
     }
     
     func playGenre(genre: String){
