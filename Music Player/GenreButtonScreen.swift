@@ -20,6 +20,7 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
     
     @IBOutlet var pausePlayButton: UIImageView!
     
+    @IBOutlet var prevButtonTap: UIImageView!
     
     //create music player variable
 
@@ -29,7 +30,7 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
         super.viewDidLoad()
         
         //you can do any additional setup after loading the view here
-        let nextButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewNextTapped(_:)))
+        let nextButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewNextSongTapped(_:)))
         nextButtonTapped.numberOfTapsRequired=1
         nextButtonTapped.numberOfTouchesRequired=1
         
@@ -37,18 +38,33 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
                playPauseButtonTapped.numberOfTapsRequired=1
                playPauseButtonTapped.numberOfTouchesRequired=1
         
+        
+        let prevButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewPrevSongTapped(_:)))
+                 playPauseButtonTapped.numberOfTapsRequired=1
+                 playPauseButtonTapped.numberOfTouchesRequired=1
+          
+        
         nextButtonTap.addGestureRecognizer(nextButtonTapped)
         pausePlayButton.addGestureRecognizer(playPauseButtonTapped)
         
+        prevButtonTap.addGestureRecognizer(prevButtonTapped)
+        
         pausePlayButton.isUserInteractionEnabled=true
         nextButtonTap.isUserInteractionEnabled=true
+        prevButtonTap.isUserInteractionEnabled=true
     }
     
+
     @objc func viewPausePlayTapped(_ gesture:UITapGestureRecognizer){
         musicPlayer.pause()
     }
     
-    @objc func viewNextTapped(_ gesture: UITapGestureRecognizer){
+    @objc func viewPrevSongTapped(_ gesture:UITapGestureRecognizer){
+        musicPlayer.skipToPreviousItem()
+        
+    }
+    
+    @objc func viewNextSongTapped(_ gesture: UITapGestureRecognizer){
         musicPlayer.skipToNextItem()
     }
 

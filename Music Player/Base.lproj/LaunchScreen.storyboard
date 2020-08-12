@@ -79,16 +79,39 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Genre" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty3-4M-w2Z">
+                                <rect key="frame" x="77" y="176" width="260" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="iOm-fl-kLz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="backward.end.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rob-Se-m1P">
+                                <rect key="frame" x="77" y="701" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="EV6-Wc-bkA"/>
+                                    <constraint firstAttribute="width" constant="48" id="F9A-hj-nyK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CBJ-So-l1T"/>
+                            <constraint firstItem="ty3-4M-w2Z" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="LCw-HQ-C2F"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="trailing" secondItem="C8H-Vc-oTO" secondAttribute="trailing" id="LIv-G5-sRn"/>
+                            <constraint firstItem="Itm-aS-AYL" firstAttribute="top" secondItem="ty3-4M-w2Z" secondAttribute="bottom" constant="27" id="OCV-97-4rv"/>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="RUV-Ra-c2J"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="centerY" secondItem="wno-Y4-WML" secondAttribute="centerY" id="WA5-lF-uHS"/>
+                            <constraint firstItem="Rob-Se-m1P" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="YR0-qV-ZHG"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="leading" secondItem="wno-Y4-WML" secondAttribute="trailing" constant="40" id="ZK7-hU-c6R"/>
+                            <constraint firstItem="ty3-4M-w2Z" firstAttribute="trailing" secondItem="C8H-Vc-oTO" secondAttribute="trailing" id="Zel-1d-PCw"/>
                             <constraint firstItem="wno-Y4-WML" firstAttribute="centerX" secondItem="C8H-Vc-oTO" secondAttribute="centerX" id="aBe-1w-kKt"/>
                             <constraint firstItem="wno-Y4-WML" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="145" id="if0-mO-XbJ"/>
+                            <constraint firstItem="wno-Y4-WML" firstAttribute="centerY" secondItem="Rob-Se-m1P" secondAttribute="centerY" id="kUY-DR-jk8"/>
+                            <constraint firstItem="gKM-UE-etd" firstAttribute="centerY" secondItem="Rob-Se-m1P" secondAttribute="centerY" id="lZd-UI-3ES"/>
+                            <constraint firstItem="ty3-4M-w2Z" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="syK-kd-KbH"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="160" id="y73-D3-sVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -96,6 +119,7 @@
                     <connections>
                         <outlet property="nextButtonTap" destination="gKM-UE-etd" id="aS5-7r-RlN"/>
                         <outlet property="pausePlayButton" destination="wno-Y4-WML" id="jZb-Sc-1fd"/>
+                        <outlet property="prevButtonTap" destination="Rob-Se-m1P" id="pDl-Cg-LH4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backward.end.fill" catalog="system" width="128" height="102"/>
         <image name="forward.end.fill" catalog="system" width="128" height="102"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
