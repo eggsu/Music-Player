@@ -26,7 +26,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <state key="normal" title="Pop"/>
+                                        <state key="normal" title="Pop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="genreButtonTapped:" destination="01J-lp-oVM" eventType="touchUpInside" id="JAW-2i-iK0"/>
                                         </connections>
@@ -39,7 +41,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <state key="normal" title="Hip-Hop/Rap"/>
+                                        <state key="normal" title="Hip-Hop/Rap">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="genreButtonTapped:" destination="01J-lp-oVM" eventType="touchUpInside" id="hWL-IM-qqk"/>
                                         </connections>
@@ -52,7 +56,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <state key="normal" title="Electronic"/>
+                                        <state key="normal" title="Electronic">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="genreButtonTapped:" destination="01J-lp-oVM" eventType="touchUpInside" id="dJe-Pd-Nbj"/>
                                         </connections>
@@ -115,9 +121,8 @@
                                     <constraint firstAttribute="width" constant="84" id="6J5-PS-hKw"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-6G-jyM">
-                                <rect key="frame" x="186" y="602" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-6G-jyM">
+                                <rect key="frame" x="77" y="602" width="260" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -126,6 +131,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="F5E-y9-Qsm" firstAttribute="centerX" secondItem="wno-Y4-WML" secondAttribute="centerX" id="09P-zd-xiJ"/>
+                            <constraint firstItem="MeR-6G-jyM" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="0UB-S5-veR"/>
                             <constraint firstItem="F5E-y9-Qsm" firstAttribute="top" secondItem="ScG-Mq-ew3" secondAttribute="bottom" constant="20" id="8R3-hb-fW1"/>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CBJ-So-l1T"/>
                             <constraint firstItem="ty3-4M-w2Z" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="LCw-HQ-C2F"/>
@@ -145,7 +151,9 @@
                             <constraint firstItem="wno-Y4-WML" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="145" id="if0-mO-XbJ"/>
                             <constraint firstItem="wno-Y4-WML" firstAttribute="centerY" secondItem="Rob-Se-m1P" secondAttribute="centerY" id="kUY-DR-jk8"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="centerY" secondItem="Rob-Se-m1P" secondAttribute="centerY" id="lZd-UI-3ES"/>
+                            <constraint firstItem="MeR-6G-jyM" firstAttribute="centerX" secondItem="ScG-Mq-ew3" secondAttribute="centerX" id="n8b-Qi-N0g"/>
                             <constraint firstItem="ty3-4M-w2Z" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="syK-kd-KbH"/>
+                            <constraint firstItem="MeR-6G-jyM" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="63" id="uyr-u1-BN7"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="160" id="y73-D3-sVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
