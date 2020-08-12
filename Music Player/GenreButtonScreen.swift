@@ -8,17 +8,19 @@
 
 import UIKit
 import MediaPlayer
+import SwiftUI
 
 class GenreButtonScreen: UIViewController {
 
     //create music player variable
     //once close app, the music player will stop
-    var musicPlayer=MPMusicPlayerController.applicationMusicPlayer
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+
+    var musicPlayer=MPMusicPlayerController.applicationMusicPlayer
+    
     
     @IBAction func genreButtonTapped(_ sender: UIButton) {
         

@@ -11,7 +11,6 @@
 		832D3DFBEE7EC530819263E1 /* Pods_Music_Player_Music_PlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067F73F739E0BBC70F7A76F7 /* Pods_Music_Player_Music_PlayerUITests.framework */; };
 		9410E34524E2DC180059786D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9410E34424E2DC180059786D /* AppDelegate.swift */; };
 		9410E34724E2DC180059786D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9410E34624E2DC180059786D /* SceneDelegate.swift */; };
-		9410E34924E2DC180059786D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9410E34824E2DC180059786D /* ContentView.swift */; };
 		9410E34B24E2DC1C0059786D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9410E34A24E2DC1C0059786D /* Assets.xcassets */; };
 		9410E34E24E2DC1C0059786D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9410E34D24E2DC1C0059786D /* Preview Assets.xcassets */; };
 		9410E35124E2DC1C0059786D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9410E34F24E2DC1C0059786D /* LaunchScreen.storyboard */; };
@@ -19,6 +18,7 @@
 		9410E36724E2DC1C0059786D /* Music_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9410E36624E2DC1C0059786D /* Music_PlayerUITests.swift */; };
 		94C7C4A024E4012F00DD5563 /* storeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C7C49F24E4012F00DD5563 /* storeData.swift */; };
 		94C7C4A224E401EB00DD5563 /* GenreButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C7C4A124E401EB00DD5563 /* GenreButtonScreen.swift */; };
+		94C7C4A424E40E1A00DD5563 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C7C4A324E40E1A00DD5563 /* ContentView.swift */; };
 		CEEC014E62B08E490FA59C2A /* Pods_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99FA727433E7099B82096E4 /* Pods_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		9410E34124E2DC180059786D /* Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9410E34424E2DC180059786D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9410E34624E2DC180059786D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9410E34824E2DC180059786D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9410E34A24E2DC1C0059786D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9410E34D24E2DC1C0059786D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9410E35024E2DC1C0059786D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		9410E36824E2DC1C0059786D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C7C49F24E4012F00DD5563 /* storeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeData.swift; sourceTree = "<group>"; };
 		94C7C4A124E401EB00DD5563 /* GenreButtonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreButtonScreen.swift; sourceTree = "<group>"; };
+		94C7C4A324E40E1A00DD5563 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/ContentView.swift"; sourceTree = "<group>"; };
 		A24F73E388473511E3A896E8 /* Pods-Music Player-Music PlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Player-Music PlayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Music Player-Music PlayerUITests/Pods-Music Player-Music PlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D78E2A0FB2E54DDDB2642 /* Pods-Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Music Player/Pods-Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 		B99FA727433E7099B82096E4 /* Pods_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,11 +144,11 @@
 		9410E34324E2DC180059786D /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				94C7C4A124E401EB00DD5563 /* GenreButtonScreen.swift */,
 				9410E34424E2DC180059786D /* AppDelegate.swift */,
 				9410E34624E2DC180059786D /* SceneDelegate.swift */,
 				9410E34F24E2DC1C0059786D /* LaunchScreen.storyboard */,
-				94C7C4A124E401EB00DD5563 /* GenreButtonScreen.swift */,
-				9410E34824E2DC180059786D /* ContentView.swift */,
+				94C7C4A324E40E1A00DD5563 /* ContentView.swift */,
 				9410E34A24E2DC1C0059786D /* Assets.xcassets */,
 				9410E35224E2DC1C0059786D /* Info.plist */,
 				9410E34C24E2DC1C0059786D /* Preview Content */,
@@ -430,10 +430,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9410E34524E2DC180059786D /* AppDelegate.swift in Sources */,
+				94C7C4A424E40E1A00DD5563 /* ContentView.swift in Sources */,
 				94C7C4A024E4012F00DD5563 /* storeData.swift in Sources */,
 				9410E34724E2DC180059786D /* SceneDelegate.swift in Sources */,
 				94C7C4A224E401EB00DD5563 /* GenreButtonScreen.swift in Sources */,
-				9410E34924E2DC180059786D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
