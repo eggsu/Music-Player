@@ -62,8 +62,9 @@
                                     <constraint firstAttribute="width" constant="260" id="F0b-rz-dfH"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wno-Y4-WML">
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" image="pause.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wno-Y4-WML">
                                 <rect key="frame" x="165" y="684.5" width="84" height="81"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES"/>
                                 </accessibility>
@@ -74,6 +75,7 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="forward.end.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gKM-UE-etd">
                                 <rect key="frame" x="289" y="701" width="48" height="48"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES"/>
                                     <bool key="isElement" value="NO"/>
@@ -90,24 +92,56 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="backward.end.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rob-Se-m1P">
                                 <rect key="frame" x="77" y="701" width="48" height="48"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="EV6-Wc-bkA"/>
                                     <constraint firstAttribute="width" constant="48" id="F9A-hj-nyK"/>
                                 </constraints>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ScG-Mq-ew3">
+                                <rect key="frame" x="77" y="663" width="260" height="2"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.5" y="0.0" width="1" height="1"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-y9-Qsm">
+                                <rect key="frame" x="165" y="685.5" width="84" height="81"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="03P-gI-n2T"/>
+                                    <constraint firstAttribute="width" constant="84" id="6J5-PS-hKw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-6G-jyM">
+                                <rect key="frame" x="186" y="602" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="F5E-y9-Qsm" firstAttribute="centerX" secondItem="wno-Y4-WML" secondAttribute="centerX" id="09P-zd-xiJ"/>
+                            <constraint firstItem="F5E-y9-Qsm" firstAttribute="top" secondItem="ScG-Mq-ew3" secondAttribute="bottom" constant="20" id="8R3-hb-fW1"/>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CBJ-So-l1T"/>
                             <constraint firstItem="ty3-4M-w2Z" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="LCw-HQ-C2F"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="trailing" secondItem="C8H-Vc-oTO" secondAttribute="trailing" id="LIv-G5-sRn"/>
+                            <constraint firstItem="ScG-Mq-ew3" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="MCc-Iw-81i"/>
                             <constraint firstItem="Itm-aS-AYL" firstAttribute="top" secondItem="ty3-4M-w2Z" secondAttribute="bottom" constant="27" id="OCV-97-4rv"/>
+                            <constraint firstItem="F5E-y9-Qsm" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="146" id="R5x-Jx-ZWn"/>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="RUV-Ra-c2J"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="centerY" secondItem="wno-Y4-WML" secondAttribute="centerY" id="WA5-lF-uHS"/>
                             <constraint firstItem="Rob-Se-m1P" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="YR0-qV-ZHG"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="leading" secondItem="wno-Y4-WML" secondAttribute="trailing" constant="40" id="ZK7-hU-c6R"/>
                             <constraint firstItem="ty3-4M-w2Z" firstAttribute="trailing" secondItem="C8H-Vc-oTO" secondAttribute="trailing" id="Zel-1d-PCw"/>
                             <constraint firstItem="wno-Y4-WML" firstAttribute="centerX" secondItem="C8H-Vc-oTO" secondAttribute="centerX" id="aBe-1w-kKt"/>
+                            <constraint firstItem="F5E-y9-Qsm" firstAttribute="leading" secondItem="wno-Y4-WML" secondAttribute="leading" id="acs-Hc-yNQ"/>
+                            <constraint firstItem="ScG-Mq-ew3" firstAttribute="trailing" secondItem="C8H-Vc-oTO" secondAttribute="trailing" id="bta-jm-1q9"/>
+                            <constraint firstItem="ScG-Mq-ew3" firstAttribute="centerX" secondItem="C8H-Vc-oTO" secondAttribute="centerX" id="cot-u3-CA2"/>
                             <constraint firstItem="wno-Y4-WML" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="145" id="if0-mO-XbJ"/>
                             <constraint firstItem="wno-Y4-WML" firstAttribute="centerY" secondItem="Rob-Se-m1P" secondAttribute="centerY" id="kUY-DR-jk8"/>
                             <constraint firstItem="gKM-UE-etd" firstAttribute="centerY" secondItem="Rob-Se-m1P" secondAttribute="centerY" id="lZd-UI-3ES"/>
@@ -117,9 +151,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="musicProgressBar" destination="ScG-Mq-ew3" id="eSM-Xz-aI4"/>
                         <outlet property="nextButtonTap" destination="gKM-UE-etd" id="aS5-7r-RlN"/>
-                        <outlet property="pausePlayButton" destination="wno-Y4-WML" id="jZb-Sc-1fd"/>
-                        <outlet property="prevButtonTap" destination="Rob-Se-m1P" id="pDl-Cg-LH4"/>
+                        <outlet property="pauseButtonTap" destination="wno-Y4-WML" id="wPm-zb-IRB"/>
+                        <outlet property="playingButtonTap" destination="F5E-y9-Qsm" id="I0o-Tn-fV1"/>
+                        <outlet property="prevButtonTap" destination="Rob-Se-m1P" id="P8f-jx-utC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,6 +166,7 @@
     <resources>
         <image name="backward.end.fill" catalog="system" width="128" height="102"/>
         <image name="forward.end.fill" catalog="system" width="128" height="102"/>
+        <image name="pause.circle" catalog="system" width="128" height="121"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

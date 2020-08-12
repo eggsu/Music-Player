@@ -15,12 +15,15 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
     var musicPlayer=MPMusicPlayerController.applicationMusicPlayer
     
 
-
     @IBOutlet var nextButtonTap: UIImageView!
     
-    @IBOutlet var pausePlayButton: UIImageView!
+    @IBOutlet var pauseButtonTap: UIImageView!
     
     @IBOutlet var prevButtonTap: UIImageView!
+    
+    @IBOutlet var playingButtonTap: UIImageView!
+    
+    @IBOutlet var musicProgressBar: UIProgressView!
     
     //create music player variable
 
@@ -34,29 +37,49 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
         nextButtonTapped.numberOfTapsRequired=1
         nextButtonTapped.numberOfTouchesRequired=1
         
-        let playPauseButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewPausePlayTapped(_:)))
-               playPauseButtonTapped.numberOfTapsRequired=1
-               playPauseButtonTapped.numberOfTouchesRequired=1
+        let pauseButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewPauseTapped(_:)))
+               pauseButtonTapped.numberOfTapsRequired=1
+               pauseButtonTapped.numberOfTouchesRequired=1
         
+        let playButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewPlayTapped(_:)))
+                     playButtonTapped.numberOfTapsRequired=1
+                     playButtonTapped.numberOfTouchesRequired=1
+              
         
         let prevButtonTapped = UITapGestureRecognizer(target:self,action:#selector(viewPrevSongTapped(_:)))
-                 playPauseButtonTapped.numberOfTapsRequired=1
-                 playPauseButtonTapped.numberOfTouchesRequired=1
+                 prevButtonTapped.numberOfTapsRequired=1
+                 prevButtonTapped.numberOfTouchesRequired=1
           
         
         nextButtonTap.addGestureRecognizer(nextButtonTapped)
-        pausePlayButton.addGestureRecognizer(playPauseButtonTapped)
         
+        playingButtonTap.addGestureRecognizer(playButtonTapped)
+              
+        pauseButtonTap.addGestureRecognizer(pauseButtonTapped)
+                   
         prevButtonTap.addGestureRecognizer(prevButtonTapped)
         
-        pausePlayButton.isUserInteractionEnabled=true
+        pauseButtonTap.isUserInteractionEnabled=true
         nextButtonTap.isUserInteractionEnabled=true
         prevButtonTap.isUserInteractionEnabled=true
+        playingButtonTap.isUserInteractionEnabled=true
     }
     
-
-    @objc func viewPausePlayTapped(_ gesture:UITapGestureRecognizer){
+ 
+//to pause the music
+    @objc func viewPlayTapped(_ gesture:UITapGestureRecognizer){
+        musicPlayer.play()
+         pauseButtonTap.isHidden=false
+         playingButtonTap.isHidden=true
+         
+     }
+    
+    //to let music play
+    @objc func viewPauseTapped(_ gesture:UITapGestureRecognizer){
         musicPlayer.pause()
+        pauseButtonTap.isHidden=true
+        playingButtonTap.isHidden=false
+        
     }
     
     @objc func viewPrevSongTapped(_ gesture:UITapGestureRecognizer){
@@ -85,9 +108,11 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
 
     
 
-
     func playGenre(genre: String){
         musicPlayer.stop()
+        
+        pauseButtonTap.isHidden=false
+        playingButtonTap.isHidden=true
         
         //create the query
         let query=MPMediaQuery()
@@ -100,6 +125,7 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
         musicPlayer.setQueue(with: query)
         musicPlayer.shuffleMode = .songs
         musicPlayer.play()
+
     
     }
 }
