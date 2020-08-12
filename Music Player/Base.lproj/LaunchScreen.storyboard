@@ -62,55 +62,49 @@
                                     <constraint firstAttribute="width" constant="260" id="F0b-rz-dfH"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="asl-kn-LKg">
-                                <rect key="frame" x="77" y="609" width="260" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-ux-ibN">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="60"/>
-                                        <color key="backgroundColor" red="0.80873542746113991" green="0.14501024884480695" blue="0.21057894383802389" alpha="0.83038072183098588" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="lnt-d9-RL3"/>
-                                            <constraint firstAttribute="height" constant="60" id="qPT-hF-Inf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Stop"/>
-                                        <connections>
-                                            <action selector="stopButtonTapped:" destination="01J-lp-oVM" eventType="touchUpInside" id="q5h-VQ-hGp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8w-JZ-QQj">
-                                        <rect key="frame" x="140" y="0.0" width="120" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="ZRp-rF-TS0"/>
-                                            <constraint firstAttribute="width" constant="120" id="d7x-li-pBH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Next">
-                                            <color key="titleColor" red="0.80873542750000005" green="0.14501024879999999" blue="0.2105789438" alpha="0.8303807218" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="nextButtonTapped:" destination="01J-lp-oVM" eventType="touchUpInside" id="WjY-ow-7lt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wno-Y4-WML">
+                                <rect key="frame" x="165" y="684.5" width="84" height="81"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="87A-w2-IXm"/>
+                                    <constraint firstAttribute="width" constant="84" id="fkJ-02-Jvs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="forward.end.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gKM-UE-etd">
+                                <rect key="frame" x="289" y="701" width="48" height="48"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="asl-kn-LKg" firstAttribute="leading" secondItem="C8H-Vc-oTO" secondAttribute="leading" id="Bkv-Re-M2x"/>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CBJ-So-l1T"/>
+                            <constraint firstItem="gKM-UE-etd" firstAttribute="trailing" secondItem="C8H-Vc-oTO" secondAttribute="trailing" id="LIv-G5-sRn"/>
                             <constraint firstItem="C8H-Vc-oTO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="RUV-Ra-c2J"/>
-                            <constraint firstItem="asl-kn-LKg" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="70" id="b6i-PD-sd2"/>
+                            <constraint firstItem="gKM-UE-etd" firstAttribute="centerY" secondItem="wno-Y4-WML" secondAttribute="centerY" id="WA5-lF-uHS"/>
+                            <constraint firstItem="gKM-UE-etd" firstAttribute="leading" secondItem="wno-Y4-WML" secondAttribute="trailing" constant="40" id="ZK7-hU-c6R"/>
+                            <constraint firstItem="wno-Y4-WML" firstAttribute="centerX" secondItem="C8H-Vc-oTO" secondAttribute="centerX" id="aBe-1w-kKt"/>
+                            <constraint firstItem="wno-Y4-WML" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="145" id="if0-mO-XbJ"/>
+                            <constraint firstItem="gKM-UE-etd" firstAttribute="top" secondItem="C8H-Vc-oTO" secondAttribute="bottom" constant="160" id="y73-D3-sVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButtonTap" destination="gKM-UE-etd" id="aS5-7r-RlN"/>
+                        <outlet property="pausePlayButton" destination="wno-Y4-WML" id="jZb-Sc-1fd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="forward.end.fill" catalog="system" width="128" height="102"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
