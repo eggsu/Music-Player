@@ -7,5 +7,5 @@ The main changes I will be making:
 -Modifying the UI and functionalities to make it my own & to learn about swift UI
 
 Changes made from initial youtube tutorial:
--UI
--Added a previous song button 
+* UI
+* Added a previous song button 
