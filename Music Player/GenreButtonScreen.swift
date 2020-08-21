@@ -14,9 +14,8 @@ class GenreButtonScreen: UIViewController, UIGestureRecognizerDelegate{
 
     var musicPlayer=MPMusicPlayerController.applicationMusicPlayer
     
-
     @IBOutlet var nextButtonTap: UIImageView!
-    
+
     @IBOutlet var pauseButtonTap: UIImageView!
     
     @IBOutlet var prevButtonTap: UIImageView!
